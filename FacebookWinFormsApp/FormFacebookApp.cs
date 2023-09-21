@@ -199,20 +199,40 @@
         private void fetchPostsOlderThanDate()
         {
             List<Post> olderPosts = new List<Post>();
-            PostscheckedListBox.Items.Clear();
-            PostscheckedListBox.DisplayMember = "Message";
 
+            PostscheckedListBox.Items.Clear();
+            PostscheckedListBox.DisplayMember = "Message"; 
             try
             {
-                foreach (Post post in m_FacebookAppDesktopLogical.m_LoggedInUser.Posts)
+                olderPosts = new FilterPostList(new FilterOlderPost(), dateTimePicker.Value).GetFilteredPostList(m_FacebookAppDesktopLogical.m_LoggedInUser.Posts.ToList());
+
+                foreach (Post post in olderPosts)
                 {
-                    if (post.CreatedTime <= dateTimePicker.Value && !string.IsNullOrEmpty(post.Message))
-                    {
-                        PostscheckedListBox.Invoke(new Action(() => PostscheckedListBox.Items.Add(post)));
-                    }
+                    PostscheckedListBox.Invoke(new Action(() => PostscheckedListBox.Items.Add(post)));
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {
+                outputTextBox.AppendText(ex.Message);
+            }
+        }
+
+        private void fetchPostsNewerThanDate()
+        {
+            List<Post> newerPosts = new List<Post>();
+
+            PostscheckedListBox.Items.Clear();
+            PostscheckedListBox.DisplayMember = "Message";
+            try
+            {
+                newerPosts = new FilterPostList(new FilterNewerPost(), dateTimePicker.Value).GetFilteredPostList(m_FacebookAppDesktopLogical.m_LoggedInUser.Posts.ToList());
+
+                foreach (Post post in newerPosts)
+                {
+                    PostscheckedListBox.Invoke(new Action(() => PostscheckedListBox.Items.Add(post)));
+                }
+            }
+            catch (Exception ex)
             {
                 outputTextBox.AppendText(ex.Message);
             }
@@ -352,6 +372,11 @@
                     outputTextBox.AppendText("Action not supported yet");
                 }
             }
+        }
+
+        private void fetchNewerButton_Click(object sender, EventArgs e)
+        {
+            new Thread(fetchPostsNewerThanDate).Start();
         }
     }
 }

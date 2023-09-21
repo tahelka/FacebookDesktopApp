@@ -107,9 +107,10 @@
             this.birthdayTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.imageNormalPictureBox1 = new System.Windows.Forms.PictureBox();
-            this.outputTextBox = OutputTextBox.Instance;
+            this.outputTextBox = new FacebookAppForDesktopInterface.OutputTextBox();
             this.commentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.messageListBox = new System.Windows.Forms.ListBox();
+            this.fetchNewerButton = new System.Windows.Forms.Button();
             descriptionLabel = new System.Windows.Forms.Label();
             likesCountLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
@@ -300,9 +301,9 @@
             // 
             // createEventButton
             // 
-            this.createEventButton.Location = new System.Drawing.Point(1212, 585);
+            this.createEventButton.Location = new System.Drawing.Point(1224, 585);
             this.createEventButton.Name = "createEventButton";
-            this.createEventButton.Size = new System.Drawing.Size(105, 23);
+            this.createEventButton.Size = new System.Drawing.Size(93, 23);
             this.createEventButton.TabIndex = 8;
             this.createEventButton.Text = "create event";
             this.createEventButton.UseVisualStyleBackColor = true;
@@ -311,17 +312,17 @@
             // friendsWhoShareBirthMonthWithUser
             // 
             this.friendsWhoShareBirthMonthWithUser.FormattingEnabled = true;
-            this.friendsWhoShareBirthMonthWithUser.Location = new System.Drawing.Point(1103, 286);
+            this.friendsWhoShareBirthMonthWithUser.Location = new System.Drawing.Point(1120, 303);
             this.friendsWhoShareBirthMonthWithUser.Name = "friendsWhoShareBirthMonthWithUser";
-            this.friendsWhoShareBirthMonthWithUser.Size = new System.Drawing.Size(214, 225);
+            this.friendsWhoShareBirthMonthWithUser.Size = new System.Drawing.Size(197, 259);
             this.friendsWhoShareBirthMonthWithUser.TabIndex = 9;
             // 
             // PostscheckedListBox
             // 
             this.PostscheckedListBox.FormattingEnabled = true;
-            this.PostscheckedListBox.Location = new System.Drawing.Point(870, 307);
+            this.PostscheckedListBox.Location = new System.Drawing.Point(864, 307);
             this.PostscheckedListBox.Name = "PostscheckedListBox";
-            this.PostscheckedListBox.Size = new System.Drawing.Size(221, 208);
+            this.PostscheckedListBox.Size = new System.Drawing.Size(236, 259);
             this.PostscheckedListBox.TabIndex = 10;
             // 
             // dateTimePicker
@@ -335,18 +336,19 @@
             // 
             this.statusesFromSpecificDateLabel.AccessibleName = "";
             this.statusesFromSpecificDateLabel.AutoSize = true;
-            this.statusesFromSpecificDateLabel.Location = new System.Drawing.Point(890, 238);
+            this.statusesFromSpecificDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.statusesFromSpecificDateLabel.Location = new System.Drawing.Point(875, 236);
             this.statusesFromSpecificDateLabel.Name = "statusesFromSpecificDateLabel";
-            this.statusesFromSpecificDateLabel.Size = new System.Drawing.Size(167, 32);
+            this.statusesFromSpecificDateLabel.Size = new System.Drawing.Size(213, 34);
             this.statusesFromSpecificDateLabel.TabIndex = 6;
-            this.statusesFromSpecificDateLabel.Text = "Fetch Statuses Backdated \r\nFrom a Specific Date";
+            this.statusesFromSpecificDateLabel.Text = "Choose a Date \r\nFor Fetching Statuses Based On";
             this.statusesFromSpecificDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(1022, 585);
+            this.buttonDelete.Location = new System.Drawing.Point(982, 622);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(69, 23);
+            this.buttonDelete.Size = new System.Drawing.Size(118, 23);
             this.buttonDelete.TabIndex = 8;
             this.buttonDelete.Text = "delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -356,7 +358,7 @@
             // 
             this.friendsWithSameBdayLabel.AccessibleName = "";
             this.friendsWithSameBdayLabel.AutoSize = true;
-            this.friendsWithSameBdayLabel.Location = new System.Drawing.Point(1100, 256);
+            this.friendsWithSameBdayLabel.Location = new System.Drawing.Point(1108, 275);
             this.friendsWithSameBdayLabel.Name = "friendsWithSameBdayLabel";
             this.friendsWithSameBdayLabel.Size = new System.Drawing.Size(221, 16);
             this.friendsWithSameBdayLabel.TabIndex = 6;
@@ -364,11 +366,11 @@
             // 
             // ButtonFetch
             // 
-            this.ButtonFetch.Location = new System.Drawing.Point(870, 585);
+            this.ButtonFetch.Location = new System.Drawing.Point(864, 575);
             this.ButtonFetch.Name = "ButtonFetch";
-            this.ButtonFetch.Size = new System.Drawing.Size(66, 23);
+            this.ButtonFetch.Size = new System.Drawing.Size(118, 41);
             this.ButtonFetch.TabIndex = 8;
-            this.ButtonFetch.Text = "fetch";
+            this.ButtonFetch.Text = "fetch up to date posts";
             this.ButtonFetch.UseVisualStyleBackColor = true;
             this.ButtonFetch.Click += new System.EventHandler(this.fetchLabel_Click);
             // 
@@ -565,9 +567,9 @@
             // 
             // buttonSelectAllPosts
             // 
-            this.buttonSelectAllPosts.Location = new System.Drawing.Point(870, 614);
+            this.buttonSelectAllPosts.Location = new System.Drawing.Point(864, 651);
             this.buttonSelectAllPosts.Name = "buttonSelectAllPosts";
-            this.buttonSelectAllPosts.Size = new System.Drawing.Size(112, 23);
+            this.buttonSelectAllPosts.Size = new System.Drawing.Size(118, 23);
             this.buttonSelectAllPosts.TabIndex = 33;
             this.buttonSelectAllPosts.Text = "Select all";
             this.buttonSelectAllPosts.UseVisualStyleBackColor = true;
@@ -575,9 +577,9 @@
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(942, 585);
+            this.buttonClear.Location = new System.Drawing.Point(864, 622);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.Size = new System.Drawing.Size(118, 23);
             this.buttonClear.TabIndex = 34;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -594,9 +596,9 @@
             // 
             // selectAllFriendsWithSameBirthMonth
             // 
-            this.selectAllFriendsWithSameBirthMonth.Location = new System.Drawing.Point(1103, 614);
+            this.selectAllFriendsWithSameBirthMonth.Location = new System.Drawing.Point(1127, 614);
             this.selectAllFriendsWithSameBirthMonth.Name = "selectAllFriendsWithSameBirthMonth";
-            this.selectAllFriendsWithSameBirthMonth.Size = new System.Drawing.Size(103, 23);
+            this.selectAllFriendsWithSameBirthMonth.Size = new System.Drawing.Size(91, 23);
             this.selectAllFriendsWithSameBirthMonth.TabIndex = 38;
             this.selectAllFriendsWithSameBirthMonth.Text = "select all";
             this.selectAllFriendsWithSameBirthMonth.UseVisualStyleBackColor = true;
@@ -604,9 +606,9 @@
             // 
             // deselectFriendsWithSameBirthMonth
             // 
-            this.deselectFriendsWithSameBirthMonth.Location = new System.Drawing.Point(1212, 614);
+            this.deselectFriendsWithSameBirthMonth.Location = new System.Drawing.Point(1224, 614);
             this.deselectFriendsWithSameBirthMonth.Name = "deselectFriendsWithSameBirthMonth";
-            this.deselectFriendsWithSameBirthMonth.Size = new System.Drawing.Size(105, 23);
+            this.deselectFriendsWithSameBirthMonth.Size = new System.Drawing.Size(93, 23);
             this.deselectFriendsWithSameBirthMonth.TabIndex = 39;
             this.deselectFriendsWithSameBirthMonth.Text = "deselect";
             this.deselectFriendsWithSameBirthMonth.UseVisualStyleBackColor = true;
@@ -614,9 +616,9 @@
             // 
             // decelectAllPostsButton
             // 
-            this.decelectAllPostsButton.Location = new System.Drawing.Point(988, 615);
+            this.decelectAllPostsButton.Location = new System.Drawing.Point(982, 652);
             this.decelectAllPostsButton.Name = "decelectAllPostsButton";
-            this.decelectAllPostsButton.Size = new System.Drawing.Size(103, 23);
+            this.decelectAllPostsButton.Size = new System.Drawing.Size(118, 23);
             this.decelectAllPostsButton.TabIndex = 40;
             this.decelectAllPostsButton.Text = "deselect all";
             this.decelectAllPostsButton.UseVisualStyleBackColor = true;
@@ -624,9 +626,9 @@
             // 
             // fetchFriendsWithSameBirthMonthButton
             // 
-            this.fetchFriendsWithSameBirthMonthButton.Location = new System.Drawing.Point(1103, 585);
+            this.fetchFriendsWithSameBirthMonthButton.Location = new System.Drawing.Point(1127, 585);
             this.fetchFriendsWithSameBirthMonthButton.Name = "fetchFriendsWithSameBirthMonthButton";
-            this.fetchFriendsWithSameBirthMonthButton.Size = new System.Drawing.Size(103, 23);
+            this.fetchFriendsWithSameBirthMonthButton.Size = new System.Drawing.Size(91, 23);
             this.fetchFriendsWithSameBirthMonthButton.TabIndex = 41;
             this.fetchFriendsWithSameBirthMonthButton.Text = "fetch";
             this.fetchFriendsWithSameBirthMonthButton.UseVisualStyleBackColor = true;
@@ -890,10 +892,21 @@
             this.messageListBox.Size = new System.Drawing.Size(220, 84);
             this.messageListBox.TabIndex = 1;
             // 
+            // fetchNewerButton
+            // 
+            this.fetchNewerButton.Location = new System.Drawing.Point(982, 575);
+            this.fetchNewerButton.Name = "fetchNewerButton";
+            this.fetchNewerButton.Size = new System.Drawing.Size(118, 41);
+            this.fetchNewerButton.TabIndex = 50;
+            this.fetchNewerButton.Text = "fetch newer posts";
+            this.fetchNewerButton.UseVisualStyleBackColor = true;
+            this.fetchNewerButton.Click += new System.EventHandler(this.fetchNewerButton_Click);
+            // 
             // FormFacebookApp
             // 
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1341, 718);
+            this.Controls.Add(this.fetchNewerButton);
             this.Controls.Add(this.messageListBox);
             this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.panelFriendsDetails);
@@ -1054,5 +1067,6 @@
         private System.Windows.Forms.BindingSource postBindingSource;
         private System.Windows.Forms.BindingSource commentsBindingSource;
         private System.Windows.Forms.ListBox messageListBox;
+        private System.Windows.Forms.Button fetchNewerButton;
     }
 }

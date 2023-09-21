@@ -12,7 +12,7 @@
         private int shakeDurationInMilliseconds = 200;
         private int shakeMagnitudeInPixels = 5;
 
-        private OutputTextBox()
+        public OutputTextBox()
         {
             Multiline = true;
             ScrollBars = ScrollBars.Vertical;
