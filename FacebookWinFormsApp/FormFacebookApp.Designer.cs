@@ -111,6 +111,12 @@
             this.commentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.messageListBox = new System.Windows.Forms.ListBox();
             this.fetchNewerButton = new System.Windows.Forms.Button();
+            this.buttonAtoE = new System.Windows.Forms.Button();
+            this.buttonFtoJ = new System.Windows.Forms.Button();
+            this.buttonKtoO = new System.Windows.Forms.Button();
+            this.buttonPtoT = new System.Windows.Forms.Button();
+            this.buttonUtoZ = new System.Windows.Forms.Button();
+            this.buttonAll = new System.Windows.Forms.Button();
             descriptionLabel = new System.Windows.Forms.Label();
             likesCountLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
@@ -902,10 +908,72 @@
             this.fetchNewerButton.UseVisualStyleBackColor = true;
             this.fetchNewerButton.Click += new System.EventHandler(this.fetchNewerButton_Click);
             // 
+            // buttonAtoE
+            // 
+            this.buttonAtoE.Location = new System.Drawing.Point(101, 539);
+            this.buttonAtoE.Name = "buttonAtoE";
+            this.buttonAtoE.Size = new System.Drawing.Size(136, 23);
+            this.buttonAtoE.TabIndex = 51;
+            this.buttonAtoE.Text = "A - E";
+            this.buttonAtoE.UseVisualStyleBackColor = true;
+            this.buttonAtoE.Click += new System.EventHandler(this.buttonAtoE_Click);
+            // 
+            // buttonFtoJ
+            // 
+            this.buttonFtoJ.Location = new System.Drawing.Point(101, 565);
+            this.buttonFtoJ.Name = "buttonFtoJ";
+            this.buttonFtoJ.Size = new System.Drawing.Size(136, 23);
+            this.buttonFtoJ.TabIndex = 52;
+            this.buttonFtoJ.Text = "F - J";
+            this.buttonFtoJ.UseVisualStyleBackColor = true;
+            // 
+            // buttonKtoO
+            // 
+            this.buttonKtoO.Location = new System.Drawing.Point(101, 594);
+            this.buttonKtoO.Name = "buttonKtoO";
+            this.buttonKtoO.Size = new System.Drawing.Size(136, 23);
+            this.buttonKtoO.TabIndex = 53;
+            this.buttonKtoO.Text = "K - O";
+            this.buttonKtoO.UseVisualStyleBackColor = true;
+            // 
+            // buttonPtoT
+            // 
+            this.buttonPtoT.Location = new System.Drawing.Point(101, 622);
+            this.buttonPtoT.Name = "buttonPtoT";
+            this.buttonPtoT.Size = new System.Drawing.Size(136, 23);
+            this.buttonPtoT.TabIndex = 54;
+            this.buttonPtoT.Text = "P - T";
+            this.buttonPtoT.UseVisualStyleBackColor = true;
+            // 
+            // buttonUtoZ
+            // 
+            this.buttonUtoZ.Location = new System.Drawing.Point(101, 652);
+            this.buttonUtoZ.Name = "buttonUtoZ";
+            this.buttonUtoZ.Size = new System.Drawing.Size(136, 23);
+            this.buttonUtoZ.TabIndex = 55;
+            this.buttonUtoZ.Text = "U - Z";
+            this.buttonUtoZ.UseVisualStyleBackColor = true;
+            // 
+            // buttonAll
+            // 
+            this.buttonAll.Location = new System.Drawing.Point(101, 682);
+            this.buttonAll.Name = "buttonAll";
+            this.buttonAll.Size = new System.Drawing.Size(136, 23);
+            this.buttonAll.TabIndex = 56;
+            this.buttonAll.Text = "All";
+            this.buttonAll.UseVisualStyleBackColor = true;
+            this.buttonAll.Click += new System.EventHandler(this.buttonAll_Click);
+            // 
             // FormFacebookApp
             // 
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1341, 718);
+            this.Controls.Add(this.buttonAll);
+            this.Controls.Add(this.buttonUtoZ);
+            this.Controls.Add(this.buttonPtoT);
+            this.Controls.Add(this.buttonKtoO);
+            this.Controls.Add(this.buttonFtoJ);
+            this.Controls.Add(this.buttonAtoE);
             this.Controls.Add(this.fetchNewerButton);
             this.Controls.Add(this.messageListBox);
             this.Controls.Add(this.outputTextBox);
@@ -1068,5 +1136,11 @@
         private System.Windows.Forms.BindingSource commentsBindingSource;
         private System.Windows.Forms.ListBox messageListBox;
         private System.Windows.Forms.Button fetchNewerButton;
+        private System.Windows.Forms.Button buttonAtoE;
+        private System.Windows.Forms.Button buttonFtoJ;
+        private System.Windows.Forms.Button buttonKtoO;
+        private System.Windows.Forms.Button buttonPtoT;
+        private System.Windows.Forms.Button buttonUtoZ;
+        private System.Windows.Forms.Button buttonAll;
     }
 }

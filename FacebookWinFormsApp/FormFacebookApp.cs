@@ -1,6 +1,7 @@
 ﻿namespace FacebookAppForDesktopInterface
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Data;
     using System.Linq;
@@ -374,9 +375,61 @@
             }
         }
 
+        // keep from here!!
+        //private void fetchFilteredLikedPagesAccordingToStartLetter(string i_SpecificLetters)
+        //{
+
+        //    List<Page> pages = getLikedPages().ToList();
+        //    Func<string, bool> startsWithSpecificLetters = name =>
+        //    !string.IsNullOrEmpty(name) && i_SpecificLetters.Any(allowedLetter => name.StartsWith(allowedLetter.ToString(), StringComparison.OrdinalIgnoreCase));
+
+        //    FacebookObjectCollection<Page> filteredLikedPages = new FacebookObjectCollection<Page>(pages, startsWithSpecificLetters);
+
+        //    for (IEnumerator it = (friends as IEnumerable).GetEnumerator();
+        //        it.MoveNext();)
+        //    {
+        //        friendsNames.Add(it.Current.ToString());
+        //    }
+
+        //    return friendsNames;
+
+
+
+        //    if (userLikedPagesList.Items.Count == 0)
+        //    {
+        //        outputTextBox.AppendText("No liked pages to retrieve :(");
+        //    }
+        //}
+
+        private FacebookWrapper.ObjectModel.FacebookObjectCollection<Page> getLikedPages()
+        {
+            FacebookWrapper.ObjectModel.FacebookObjectCollection<Page> likedPages = new FacebookWrapper.ObjectModel.FacebookObjectCollection<Page> ();
+
+            try
+            {
+                likedPages = m_FacebookAppDesktopLogical.m_LoggedInUser.LikedPages;
+            }
+            catch (Exception ex)
+            {
+                outputTextBox.AppendText(ex.Message);
+            }
+
+            return likedPages;
+        }
+
         private void fetchNewerButton_Click(object sender, EventArgs e)
         {
             new Thread(fetchPostsNewerThanDate).Start();
+        }
+
+        private void buttonAll_Click(object sender, EventArgs e)
+        {
+            new Thread(fetchUserLikedPages).Start();
+        }
+
+        private void buttonAtoE_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
