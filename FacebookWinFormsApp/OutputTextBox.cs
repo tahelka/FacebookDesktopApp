@@ -9,25 +9,9 @@ namespace FacebookAppForDesktopInterface
     {
         private static readonly object lockObject = new object();
         private static OutputTextBox instance = null;
-        private bool isShaking = false;
-        private int shakeDurationInMilliseconds = 200;
-        private int shakeMagnitudeInPixels = 5;
         private Shaker shaker = new Shaker();
 
-        public bool IsShaking
-        {
-            get { return isShaking; } set { isShaking = value; }
-        }
-
-        public int ShakeDurationInMilliseconds
-        {
-            get { return shakeDurationInMilliseconds; } set { shakeDurationInMilliseconds = value; }
-        }
-
-        public int ShakeMagnitudeInPixels
-        {
-            get { return shakeMagnitudeInPixels; } set { shakeMagnitudeInPixels = value; }
-        }
+        public bool IsShaking { get; set; } = false;
 
         public OutputTextBox()
         {

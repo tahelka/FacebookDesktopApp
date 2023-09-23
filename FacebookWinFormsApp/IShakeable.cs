@@ -11,10 +11,6 @@ namespace BasicFacebookFeatures
     {
         bool IsShaking { get; set; }
 
-        int ShakeDurationInMilliseconds { get; set; }
-
-        int ShakeMagnitudeInPixels { get; set; }
-
         Point Location { get; set; }
 
         void Shake();

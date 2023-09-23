@@ -10,24 +10,28 @@ namespace BasicFacebookFeatures
 {
     internal class Shaker
     {
-        public void Shake(IShakeable i_shakeable)
+        public int ShakeDurationInMilliseconds { get; set; } = 200;
+
+        public int ShakeMagnitudeInPixels { get; set; } = 5;
+
+        public void Shake(IShakeable i_ToShake)
         {
-            if (!i_shakeable.IsShaking)
+            if (!i_ToShake.IsShaking)
             {
-                i_shakeable.IsShaking = true;
-                Point originalLocation = i_shakeable.Location;
+                i_ToShake.IsShaking = true;
+                Point originalLocation = i_ToShake.Location;
                 Random random = new Random();
                 DateTime startTime = DateTime.Now;
-                while ((DateTime.Now - startTime).TotalMilliseconds < i_shakeable.ShakeDurationInMilliseconds)
+                while ((DateTime.Now - startTime).TotalMilliseconds < ShakeDurationInMilliseconds)
                 {
-                    int offsetX = random.Next(-i_shakeable.ShakeMagnitudeInPixels, i_shakeable.ShakeMagnitudeInPixels);
-                    int offsetY = random.Next(-i_shakeable.ShakeMagnitudeInPixels, i_shakeable.ShakeMagnitudeInPixels);
-                    i_shakeable.Invoke(new Action(() => i_shakeable.Location = new Point(originalLocation.X + offsetX, originalLocation.Y + offsetY)));
+                    int offsetX = random.Next(-ShakeMagnitudeInPixels, ShakeMagnitudeInPixels);
+                    int offsetY = random.Next(-ShakeMagnitudeInPixels, ShakeMagnitudeInPixels);
+                    i_ToShake.Invoke(new Action(() => i_ToShake.Location = new Point(originalLocation.X + offsetX, originalLocation.Y + offsetY)));
                     Application.DoEvents();
                 }
 
-                i_shakeable.Invoke(new Action(() => i_shakeable.Location = originalLocation));
-                i_shakeable.Invoke(new Action(() => i_shakeable.IsShaking = false));
+                i_ToShake.Invoke(new Action(() => i_ToShake.Location = originalLocation));
+                i_ToShake.Invoke(new Action(() => i_ToShake.IsShaking = false));
             }
         }
     }

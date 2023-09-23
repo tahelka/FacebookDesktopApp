@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FacebookAppForDesktopLogic.AppSettings" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACEAgAAAAAIIAAAAAAQQAAEAAAAAAEAAAAAAAECA=</HashCode>
+      <FileName>AppSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FacebookAppForDesktopLogic.FacebookDesktopAppLogic" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAAABAQAAAAAAgBAAKIgAAAAIAAAAAAAAAEgAI=</HashCode>
+      <FileName>FacebookDesktopAppLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FacebookAppForDesktopLogic.FacebookObjectCollection&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAABAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FacebookObjectCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FacebookAppForDesktopLogic.FilterNewerPost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>FilterNewerPost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FacebookAppForDesktopLogic.FilterOlderPost" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>FilterOlderPost.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FacebookAppForDesktopLogic.FilterPostList" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAACAAA=</HashCode>
+      <FileName>FilterPostList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FacebookAppForDesktopLogic.FormFactory" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FacebookAppForDesktopInterface.FormCreateEvent" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAAQwQAAICAABACAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormCreateEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FacebookAppForDesktopInterface.FormFacebookApp" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UCM0QshI8S6vhO8CbMKXIMAfSACVYCSiIKAeBHCFNVw=</HashCode>
+      <FileName>FormFacebookApp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FacebookAppForDesktopInterface.FormMain" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACYAQEAACABABCAYECAAAgSCAIAAgAAAAAAAAABHAA=</HashCode>
+      <FileName>FormMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FacebookAppForDesktopInterface.OutputTextBox" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAwAAAAAAQAAAAAAAAAABAAAAAQAAACABAAAg=</HashCode>
+      <FileName>OutputTextBox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FacebookAppForDesktopInterface.Program" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BasicFacebookFeatures.Shaker">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAg=</HashCode>
+      <FileName>Shaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BasicFacebookFeatures.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAABEAAAAQAAAAAAAAAAAAAAIIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BasicFacebookFeatures.Properties.Settings" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="FacebookAppForDesktopLogic.IPostFilter" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>IPostFilter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BasicFacebookFeatures.IShakeable">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAIAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>IShakeable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
