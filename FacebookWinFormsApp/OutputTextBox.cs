@@ -1,16 +1,33 @@
-﻿namespace FacebookAppForDesktopInterface
-{
-    using System;
-    using System.Drawing;
-    using System.Windows.Forms;
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+using BasicFacebookFeatures;
 
-    public class OutputTextBox : TextBox
+namespace FacebookAppForDesktopInterface
+{
+    public class OutputTextBox : TextBox, IShakeable
     {
         private static readonly object lockObject = new object();
         private static OutputTextBox instance = null;
         private bool isShaking = false;
         private int shakeDurationInMilliseconds = 200;
         private int shakeMagnitudeInPixels = 5;
+        private Shaker shaker = new Shaker();
+
+        public bool IsShaking
+        {
+            get { return isShaking; } set { isShaking = value; }
+        }
+
+        public int ShakeDurationInMilliseconds
+        {
+            get { return shakeDurationInMilliseconds; } set { shakeDurationInMilliseconds = value; }
+        }
+
+        public int ShakeMagnitudeInPixels
+        {
+            get { return shakeMagnitudeInPixels; } set { shakeMagnitudeInPixels = value; }
+        }
 
         public OutputTextBox()
         {
@@ -44,33 +61,17 @@
             string message = $"{now} - {text} {System.Environment.NewLine}";
 
             Invoke(new Action(() => base.AppendText(message)));
-            shake();
-        }
-
-        private void shake()
-        {
-            if (!isShaking)
-            {
-                isShaking = true;
-                Point originalLocation = Location;
-                Random random = new Random();
-                DateTime startTime = DateTime.Now;
-                while ((DateTime.Now - startTime).TotalMilliseconds < shakeDurationInMilliseconds)
-                {
-                    int offsetX = random.Next(-shakeMagnitudeInPixels, shakeMagnitudeInPixels);
-                    int offsetY = random.Next(-shakeMagnitudeInPixels, shakeMagnitudeInPixels);
-                    Invoke(new Action(() => Location = new Point(originalLocation.X + offsetX, originalLocation.Y + offsetY)));
-                    Application.DoEvents();
-                }
-
-                Invoke(new Action(() => Location = originalLocation));
-                Invoke(new Action(() => isShaking = false));
-            }
+            Shake();
         }
 
         public new void Clear()
         {
             base.Clear();
+        }
+
+        public void Shake()
+        {
+            shaker.Shake(this);
         }
     }
 }
