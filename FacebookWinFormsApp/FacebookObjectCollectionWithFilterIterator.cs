@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace FacebookAppForDesktopLogic
 {
-    internal class FacebookObjectCollection<T> : IEnumerable
+    internal class FacebookObjectCollectionWithFilterIterator<T> : IEnumerable
         where T : FacebookObject
     {
         public readonly IEnumerable<T> r_FacebookObjects;
         private readonly Func<T, bool> r_Test;
 
-        public FacebookObjectCollection(IEnumerable<T> i_FacebookObjects, Func<T, bool> i_Test = null)
+        public FacebookObjectCollectionWithFilterIterator(IEnumerable<T> i_FacebookObjects, Func<T, bool> i_Test = null)
         {
             r_FacebookObjects = i_FacebookObjects;
             r_Test = i_Test;

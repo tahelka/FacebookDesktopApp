@@ -875,6 +875,7 @@
             // 
             // outputTextBox
             // 
+            this.outputTextBox.IsShaking = false;
             this.outputTextBox.Location = new System.Drawing.Point(366, 128);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
@@ -926,6 +927,7 @@
             this.buttonFtoJ.TabIndex = 52;
             this.buttonFtoJ.Text = "F - J";
             this.buttonFtoJ.UseVisualStyleBackColor = true;
+            this.buttonFtoJ.Click += new System.EventHandler(this.buttonFtoJ_Click);
             // 
             // buttonKtoO
             // 
@@ -935,6 +937,7 @@
             this.buttonKtoO.TabIndex = 53;
             this.buttonKtoO.Text = "K - O";
             this.buttonKtoO.UseVisualStyleBackColor = true;
+            this.buttonKtoO.Click += new System.EventHandler(this.buttonKtoO_Click);
             // 
             // buttonPtoT
             // 
@@ -944,6 +947,7 @@
             this.buttonPtoT.TabIndex = 54;
             this.buttonPtoT.Text = "P - T";
             this.buttonPtoT.UseVisualStyleBackColor = true;
+            this.buttonPtoT.Click += new System.EventHandler(this.buttonPtoT_Click);
             // 
             // buttonUtoZ
             // 
@@ -953,6 +957,7 @@
             this.buttonUtoZ.TabIndex = 55;
             this.buttonUtoZ.Text = "U - Z";
             this.buttonUtoZ.UseVisualStyleBackColor = true;
+            this.buttonUtoZ.Click += new System.EventHandler(this.buttonUtoZ_Click);
             // 
             // buttonAll
             // 

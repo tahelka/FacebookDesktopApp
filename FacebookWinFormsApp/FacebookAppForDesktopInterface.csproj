@@ -116,7 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
-    <Compile Include="FacebookObjectCollection.cs" />
+    <Compile Include="FacebookObjectCollectionWithFilterIterator.cs" />
     <Compile Include="FilterNewerPost.cs" />
     <Compile Include="FilterOlderPost.cs" />
     <Compile Include="FormCreateEvent.cs">

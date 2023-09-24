@@ -375,31 +375,26 @@
             }
         }
 
-        // keep from here!!
-        //private void fetchFilteredLikedPagesAccordingToStartLetter(string i_SpecificLetters)
-        //{
+        private void fetchFilteredLikedPagesAccordingToStartLetter(string i_SpecificLetters)
+        {
+            List<Page> likedPagesList = getLikedPages().ToList();
+            List<Page> filteredLikedPagesList = new List<Page>();
+            Func<Page, bool> isPageNameStartWithAnyOfSpecificLettersFunc = pageName =>
+            !string.IsNullOrEmpty(pageName.Name) && i_SpecificLetters.Any(allowedLetter => pageName.Name.StartsWith(allowedLetter.ToString(), StringComparison.OrdinalIgnoreCase));
+            FacebookObjectCollectionWithFilterIterator<Page> filteredLikedPages = new FacebookObjectCollectionWithFilterIterator<Page>(likedPagesList, isPageNameStartWithAnyOfSpecificLettersFunc);
 
-        //    List<Page> pages = getLikedPages().ToList();
-        //    Func<string, bool> startsWithSpecificLetters = name =>
-        //    !string.IsNullOrEmpty(name) && i_SpecificLetters.Any(allowedLetter => name.StartsWith(allowedLetter.ToString(), StringComparison.OrdinalIgnoreCase));
+            for (IEnumerator iterator = (filteredLikedPages as IEnumerable).GetEnumerator();
+                iterator.MoveNext();)
+            {
+                filteredLikedPagesList.Add((Page)iterator.Current);
+            }
 
-        //    FacebookObjectCollection<Page> filteredLikedPages = new FacebookObjectCollection<Page>(pages, startsWithSpecificLetters);
-
-        //    for (IEnumerator it = (friends as IEnumerable).GetEnumerator();
-        //        it.MoveNext();)
-        //    {
-        //        friendsNames.Add(it.Current.ToString());
-        //    }
-
-        //    return friendsNames;
-
-
-
-        //    if (userLikedPagesList.Items.Count == 0)
-        //    {
-        //        outputTextBox.AppendText("No liked pages to retrieve :(");
-        //    }
-        //}
+            pageBindingSource.DataSource = filteredLikedPagesList;
+            if (userLikedPagesList.Items.Count == 0)
+            {
+                outputTextBox.AppendText("No liked pages to retrieve :(");
+            }
+        }
 
         private FacebookWrapper.ObjectModel.FacebookObjectCollection<Page> getLikedPages()
         {
@@ -429,7 +424,27 @@
 
         private void buttonAtoE_Click(object sender, EventArgs e)
         {
+            fetchFilteredLikedPagesAccordingToStartLetter("abcde");
+        }
 
+        private void buttonFtoJ_Click(object sender, EventArgs e)
+        {
+            fetchFilteredLikedPagesAccordingToStartLetter("fghij");
+        }
+
+        private void buttonKtoO_Click(object sender, EventArgs e)
+        {
+            fetchFilteredLikedPagesAccordingToStartLetter("klmno");
+        }
+
+        private void buttonPtoT_Click(object sender, EventArgs e)
+        {
+            fetchFilteredLikedPagesAccordingToStartLetter("pqrst");
+        }
+
+        private void buttonUtoZ_Click(object sender, EventArgs e)
+        {
+            fetchFilteredLikedPagesAccordingToStartLetter("uvwxyz");
         }
     }
 }
