@@ -377,11 +377,10 @@
 
         private void fetchFilteredLikedPagesAccordingToStartLetter(string i_SpecificLetters)
         {
-            List<Page> likedPagesList = getLikedPages().ToList();
             List<Page> filteredLikedPagesList = new List<Page>();
             Func<Page, bool> isPageNameStartWithAnyOfSpecificLettersFunc = pageName =>
             !string.IsNullOrEmpty(pageName.Name) && i_SpecificLetters.Any(allowedLetter => pageName.Name.StartsWith(allowedLetter.ToString(), StringComparison.OrdinalIgnoreCase));
-            FacebookObjectCollectionWithFilterIterator<Page> filteredLikedPages = new FacebookObjectCollectionWithFilterIterator<Page>(likedPagesList, isPageNameStartWithAnyOfSpecificLettersFunc);
+            FacebookObjectCollectionWithFilterIterator<Page> filteredLikedPages = new FacebookObjectCollectionWithFilterIterator<Page>(getLikedPages(), isPageNameStartWithAnyOfSpecificLettersFunc);
 
             for (IEnumerator iterator = (filteredLikedPages as IEnumerable).GetEnumerator();
                 iterator.MoveNext();)
