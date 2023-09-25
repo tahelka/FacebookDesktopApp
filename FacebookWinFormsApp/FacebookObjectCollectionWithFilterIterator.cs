@@ -11,7 +11,7 @@ namespace FacebookAppForDesktopLogic
     internal class FacebookObjectCollectionWithFilterIterator<T> : IEnumerable
         where T : FacebookObject
     {
-        public readonly IEnumerable<T> r_FacebookObjects;
+        private readonly IEnumerable<T> r_FacebookObjects;
         private readonly Func<T, bool> r_Test;
 
         public FacebookObjectCollectionWithFilterIterator(IEnumerable<T> i_FacebookObjects, Func<T, bool> i_Test = null)
