@@ -1,18 +1,14 @@
-﻿using FacebookWrapper.ObjectModel;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace FacebookAppForDesktopLogic
+﻿namespace FacebookAppForDesktopLogic
 {
+    using System;
+    using System.Collections.Generic;
+    using FacebookWrapper.ObjectModel;
+
     public class FilterPostList
     {
-        public IPostFilter PostFilter { get; set; }
         private readonly DateTime r_ChosenDateTimeOnDateTimePicker;
+
+        public IPostFilter PostFilter { get; set; }
 
         public FilterPostList(IPostFilter i_Filter, DateTime i_ChosenDateTimeOnDateTimePicker)
         {
