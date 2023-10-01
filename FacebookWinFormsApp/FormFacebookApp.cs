@@ -202,7 +202,7 @@
             List<Post> olderPosts = new List<Post>();
 
             PostscheckedListBox.Items.Clear();
-            PostscheckedListBox.DisplayMember = "Message"; 
+            PostscheckedListBox.DisplayMember = "Message";
             try
             {
                 olderPosts = new FilterPostList(new FilterOlderPost(), dateTimePicker.Value).GetFilteredPostList(m_FacebookAppDesktopLogical.m_LoggedInUser.Posts.ToList());
