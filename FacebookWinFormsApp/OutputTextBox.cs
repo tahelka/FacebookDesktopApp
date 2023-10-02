@@ -13,7 +13,7 @@ namespace FacebookAppForDesktopInterface
 
         public bool IsShaking { get; set; } = false;
 
-        public OutputTextBox()
+        private OutputTextBox()
         {
             Multiline = true;
             ScrollBars = ScrollBars.Vertical;

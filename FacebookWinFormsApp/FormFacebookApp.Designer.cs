@@ -107,7 +107,7 @@
             this.birthdayTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.imageNormalPictureBox1 = new System.Windows.Forms.PictureBox();
-            this.outputTextBox = new FacebookAppForDesktopInterface.OutputTextBox();
+            this.outputTextBox = OutputTextBox.Instance;
             this.commentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.messageListBox = new System.Windows.Forms.ListBox();
             this.fetchNewerButton = new System.Windows.Forms.Button();

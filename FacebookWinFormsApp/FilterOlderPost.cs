@@ -1,13 +1,8 @@
-﻿using FacebookWrapper.ObjectModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace FacebookAppForDesktopLogic
+﻿namespace FacebookAppForDesktopLogic
 {
+    using System;
+    using FacebookWrapper.ObjectModel;
+
     internal class FilterOlderPost : IPostFilter
     {
         public bool ShouldAddPostToList(Post i_Post, DateTime i_ChosenDateTimeOnDateTimePicker)

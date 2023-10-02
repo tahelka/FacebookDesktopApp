@@ -397,7 +397,7 @@
 
         private FacebookWrapper.ObjectModel.FacebookObjectCollection<Page> getLikedPages()
         {
-            FacebookWrapper.ObjectModel.FacebookObjectCollection<Page> likedPages = new FacebookWrapper.ObjectModel.FacebookObjectCollection<Page> ();
+            FacebookWrapper.ObjectModel.FacebookObjectCollection<Page> likedPages = new FacebookWrapper.ObjectModel.FacebookObjectCollection<Page>();
 
             try
             {
