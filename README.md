@@ -1,1 +1,1 @@
-# Facebook-like system in C# using the Facebook API 
+# Facebook desktop app in C# using the Facebook API 
