@@ -24,7 +24,7 @@ A modular desktop application built with WinForms and C# that provides a user-fr
 
 ---
 
-## :tools: Technologies Used
+## 🧰: Technologies Used
 
 - **Language:** C#
 - **Framework:** .NET Framework with WinForms
